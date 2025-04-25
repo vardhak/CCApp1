@@ -1,7 +1,7 @@
-runtime: python311
+runtime: python27
 
 entrypoint: gunicorn -b :$PORT app:app
 
 handlers:
   - url: /.*
-    script: auto
+    script: app.py
